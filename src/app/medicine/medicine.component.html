@@ -1,0 +1,25 @@
+<div class='card'>
+    <div class='card-header'>
+      {{pageTitle}}
+    </div>
+    <div class='card-body'>
+      <div class='table-responsive'>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Company</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let medicine of medicines'>
+              <td>{{ medicine.medicineName }} </td>
+              <td>{{ medicine.medicineCompany | lowercase  }}</td>
+              <td>{{ medicine.price | currency:'USD':'symbol':'1.2-2' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
